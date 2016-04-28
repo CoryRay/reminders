@@ -3,11 +3,19 @@
 <head>
   <title>Reminders</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <%= favicon_link_tag 'favicon.png' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
+
+  <footer class="container">
+      by: <a href="https://github.com/CoryRay">Cory Rodriguez</a>
+  </footer>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>

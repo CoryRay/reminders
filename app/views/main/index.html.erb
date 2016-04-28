@@ -1,0 +1,28 @@
+<main class="container">
+  <h1>what de fack - reminders</h1>
+
+  <hr>
+  <section>
+    <h2>current reminds</h2>
+    <table class="table u-full-width">
+      <thead>
+        <tr>
+          <% Reminder.column_names.each do |column| %>
+            <th><%= column %></th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @reminders.each do |reminder| %>
+          <tr>
+            <td><%= reminder.id %></td>
+            <td><%= reminder.name %></td>
+            <td><%= reminder.frequency %></td>
+            <td><%= reminder.at %></td>
+            <td><%= reminder.body %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </section>
+</main>
